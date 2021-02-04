@@ -5,7 +5,7 @@
 //  Created by 彭远洋 on 2021/2/4.
 //
 
-#import "SALogAssassin.h"
+#import "LogAssassin.h"
 #import <sys/uio.h>
 #import <stdio.h>
 #import <fishhook/fishhook.h>
