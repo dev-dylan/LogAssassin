@@ -64,13 +64,15 @@ void rebindFunction(void) {
     }
     Class bridge = NSClassFromString(@"RCTBridge");
     if ([bridge respondsToSelector:NSSelectorFromString(@"currentBridge")]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
         id currentBridge = [bridge performSelector:NSSelectorFromString(@"currentBridge")];
         if ([currentBridge respondsToSelector:NSSelectorFromString(@"logMessage:level:")]) {
             [currentBridge performSelector:NSSelectorFromString(@"logMessage:level:") withObject:msg withObject:@"info"];
         }
+#pragma clang diagnostic pop
     }
 }
 
 #endif
-
 @end
