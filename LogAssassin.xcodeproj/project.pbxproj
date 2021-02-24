@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FC209ED125CBFBED001D9FEA /* LogAssassin.h in Headers */ = {isa = PBXBuildFile; fileRef = FC209ECF25CBFBED001D9FEA /* LogAssassin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC209ED925CBFC08001D9FEA /* LogAssassin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC209ED825CBFC08001D9FEA /* LogAssassin.m */; };
+		FCAAD70425E5FCB100A03122 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = FCAAD70225E5FCB100A03122 /* fishhook.h */; };
+		FCAAD70525E5FCB100A03122 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = FCAAD70325E5FCB100A03122 /* fishhook.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +18,8 @@
 		FC209ECF25CBFBED001D9FEA /* LogAssassin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogAssassin.h; sourceTree = "<group>"; };
 		FC209ED025CBFBED001D9FEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC209ED825CBFC08001D9FEA /* LogAssassin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogAssassin.m; sourceTree = "<group>"; };
+		FCAAD70225E5FCB100A03122 /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		FCAAD70325E5FCB100A03122 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 		FC209ECE25CBFBED001D9FEA /* LogAssassin */ = {
 			isa = PBXGroup;
 			children = (
+				FCAAD70325E5FCB100A03122 /* fishhook.c */,
+				FCAAD70225E5FCB100A03122 /* fishhook.h */,
 				FC209ECF25CBFBED001D9FEA /* LogAssassin.h */,
 				FC209ED825CBFC08001D9FEA /* LogAssassin.m */,
 				FC209ED025CBFBED001D9FEA /* Info.plist */,
@@ -63,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC209ED125CBFBED001D9FEA /* LogAssassin.h in Headers */,
+				FCAAD70425E5FCB100A03122 /* fishhook.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCAAD70525E5FCB100A03122 /* fishhook.c in Sources */,
 				FC209ED925CBFC08001D9FEA /* LogAssassin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

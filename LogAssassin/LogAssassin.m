@@ -8,7 +8,7 @@
 #import "LogAssassin.h"
 #import <sys/uio.h>
 #import <stdio.h>
-#import <fishhook/fishhook.h>
+#import "fishhook.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
 @implementation SALogAssassin
@@ -58,21 +58,17 @@ void rebindFunction(void) {
     });
 }
 
-static JSContext *__context;
 +(void)logMessage:(NSString *)msg {
-
     if (!([msg containsString:@"Sensors"] || [msg containsString:@"SA"])) {
         return;
     }
-
-    if (!__context) {
-        __context = [[JSContext alloc] init];
+    Class bridge = NSClassFromString(@"RCTBridge");
+    if ([bridge respondsToSelector:NSSelectorFromString(@"currentBridge")]) {
+        id currentBridge = [bridge performSelector:NSSelectorFromString(@"currentBridge")];
+        if ([currentBridge respondsToSelector:NSSelectorFromString(@"logMessage:level:")]) {
+            [currentBridge performSelector:NSSelectorFromString(@"logMessage:level:") withObject:msg withObject:@"info"];
+        }
     }
-
-    NSString *js = @"function logMessage(message){ console.log(message)}";
-    [__context evaluateScript:js];
-    JSValue *function1 = __context[@"logMessage"];
-    [function1 callWithArguments:@[msg]];
 }
 
 #endif
