@@ -1,0 +1,22 @@
+{
+  "name": "log-assassin",
+  "version": "0.0.1",
+  "private": false,
+  "description": "神策分析 React Native 插件日志工具",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sensors",
+    "analytics",
+    "神策",
+    "神策分析"
+  ],
+  "author": "pengyuanyang",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-dylan/LogAssassin.git"
+  },
+   "homepage": "https://github.com/dev-dylan/LogAssassin"
+}

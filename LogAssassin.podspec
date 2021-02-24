@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "LogAssassin"
   s.version      = "0.0.1"
-  s.summary      = "Show log message in Safari"
+  s.summary      = "Show log message in console"
   s.homepage     = "https://github.com/dev-dylan"
   s.license = { :type => 'MIT', :text => <<-LICENSE
                     MIT License
@@ -26,8 +26,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.author       = { "pengyuanyang" => "455859128@qq.com" }
   s.source       = { :git => "https://github.com/dev-dylan/LogAssassin.git", :tag => s.version }
-  s.source_files  = "LogAssassin/*.{h,m}"
-  s.dependency 'fishhook'
+  s.source_files  = "ios/LogAssassin/*.{h,m}"
   s.frameworks = 'UIKit', 'Foundation', 'SystemConfiguration', 'JavaScriptCore'
   s.swift_version = '5.0'
 
