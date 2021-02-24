@@ -16,3 +16,8 @@ npm install sa-react-native-log-tools
 react-native link sa-react-native-log-tools
 ```
 
+## 注意事项
+
+此功能只在 DEBUG 模式下生效，RELEASE 模式下不生效。
+
+ 
